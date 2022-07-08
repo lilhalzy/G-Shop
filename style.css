@@ -36,3 +36,7 @@ nav {
   font-size: 1.3rem;
   font-weight: bold;
 }
+
+nav img {
+  transform: scale(.7);
+}
