@@ -40,3 +40,14 @@ nav {
 nav img {
   transform: scale(.7);
 }
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80vh;
+}
+
+.img-container img {
+  width: 90%;
+}
