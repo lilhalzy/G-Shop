@@ -46,8 +46,29 @@ nav img {
   align-items: center;
   justify-content: flex-start;
   height: 80vh;
+  z-index: 2;
+  flex: 1;
 }
 
 .img-container img {
   width: 90%;
+}
+
+.showcase-text {
+  color: #fff;
+  flex: 1;
+  padding-bottom: 10rem;
+}
+
+/* Bubbles */
+.circle {
+  position: absolute;
+  left: 23%;
+  transform: scale(1.5);
+}
+
+.circle-1 {
+  left: -3%;
+  bottom: -3%;
+  transform: scale(2.5);
 }
