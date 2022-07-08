@@ -1,1 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Finlandica&family=Poppins:wght@400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Finlandica', sans-serif;
+}
+
+body {
+  background: linear-gradient(260deg, #A0B2A6, #A9ACA9)
+}
+
+.showcase {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90vh;
+  padding: 0 15% 0 15%;
+  overflow: hidden;
+}
