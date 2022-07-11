@@ -60,6 +60,15 @@ nav img {
   padding-bottom: 10rem;
 }
 
+.showcase-title {
+  font-size: 4rem;
+}
+
+.showcase-subtitle {
+  font-size: 1.3rem;
+  padding: 3rem 0;
+}
+
 /* Bubbles */
 .circle {
   position: absolute;
