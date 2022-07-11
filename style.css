@@ -79,6 +79,12 @@ nav img {
   border: none;
 }
 
+.showcase-arrow {
+  position: absolute;
+  right: 15%;
+  bottom: 10%;
+  transform: scale(.6);
+}
 /* Bubbles */
 .circle {
   position: absolute;
