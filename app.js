@@ -1,10 +1,21 @@
 const timeline = gsap.timeline({
-  defaults: {duration: .75, ease: "Power2.easeOut"}
-})
+  defaults: { duration: 0.75, ease: "Power2.easeOut" },
+});
 const tEnter = gsap.timeline({
-  defaults: {duration: .75, ease: "Power2.easeOut"}
-})
+  defaults: { duration: 0.75, ease: "Power2.easeOut" },
+});
 
+// in progress
+// leave and enter animation
+const leaveAnimation = (current, done) => {
+  const product = current.querySelector(".img-container");
+  const text = current.querySelector(".showcase-text");
+  const circles = current.querySelector(".circle");
+  const arrow = current.querySelector(".showcase-arrow");
+  return (
+    tLeave.fromTo(arrow, { opacity: 1, y: 0 }, { opacity: 1, y: 200 })
+  );
+};
 // Run animations
 barba.init({
   preventRunning: true,
@@ -15,11 +26,7 @@ barba.init({
       leave(data) {
         const done = this.async();
         let current = data.current.container;
-        gsap.fromTo(
-          current,
-          { opacity: 1 },
-          { opacity: 0, duration: 1, onComplete: done }
-        );
+        leaveAnimation(current, done);
       },
       enter(data) {
         const done = this.async();
