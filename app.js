@@ -1,3 +1,10 @@
+const timeline = gsap.timeline({
+  defaults: {duration: .75, ease: "Power2.easeOut"}
+})
+const tEnter = gsap.timeline({
+  defaults: {duration: .75, ease: "Power2.easeOut"}
+})
+
 // Run animations
 barba.init({
   preventRunning: true,
