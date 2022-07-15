@@ -16,8 +16,14 @@ const leaveAnimation = (current, done) => {
   const circles = current.querySelector(".circle");
   const arrow = current.querySelector(".showcase-arrow");
   return (
-    tLeave.fromTo(arrow, { opacity: 1, y: 0 }, { opacity: 0, y: 200 }),
-    tLeave.fromTo(product, { opacity: 1, y: 0 }, { opacity: 0, y: -100, onComplete: done })
+    tLeave.fromTo(arrow, { opacity: 1, y: 0 }, { opacity: 0, y: 50 }),
+    tLeave.fromTo(
+      product,
+      { opacity: 1, y: 0 },
+      { opacity: 0, y: 100, onComplete: done },
+      "<"
+    ),
+    tLeave.fromTo(text, { opacity: 1, y: 0 }, { opacity: 0, y: 100 }, "<")
   );
 };
 // Run animations
