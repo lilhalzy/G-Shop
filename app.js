@@ -4,6 +4,9 @@ const timeline = gsap.timeline({
 const tEnter = gsap.timeline({
   defaults: { duration: 0.75, ease: "Power2.easeOut" },
 });
+const tLeave = gsap.timeline({
+  defaults: { duration: 0.75, ease: "Power2.easeOut" },
+});
 
 // in progress
 // leave and enter animation
@@ -13,7 +16,8 @@ const leaveAnimation = (current, done) => {
   const circles = current.querySelector(".circle");
   const arrow = current.querySelector(".showcase-arrow");
   return (
-    tLeave.fromTo(arrow, { opacity: 1, y: 0 }, { opacity: 1, y: 200 })
+    tLeave.fromTo(arrow, { opacity: 1, y: 0 }, { opacity: 0, y: 200 }),
+    tLeave.fromTo(product, { opacity: 1, y: 0 }, { opacity: 0, y: -100, onComplete: done })
   );
 };
 // Run animations
