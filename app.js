@@ -1,5 +1,6 @@
 // Run animations
 barba.init({
+  preventRunning: true,
   transitions: [
     // showcase transitions
     {
