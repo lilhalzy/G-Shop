@@ -23,7 +23,18 @@ const leaveAnimation = (current, done) => {
       { opacity: 0, y: 100, onComplete: done },
       "<"
     ),
-    tLeave.fromTo(text, { opacity: 1, y: 0 }, { opacity: 0, y: 100 }, "<")
+    tLeave.fromTo(
+      text,
+      { opacity: 1, y: 0 },
+      { opacity: 0, y: 100, onComplete: done },
+      "<"
+    ),
+    tLeave.fromTo(
+      circles,
+      { opacity: 1, y: 0 },
+      { opacity: 0, y: -200, stagger: 0.15 },
+      "<"
+    )
   );
 };
 // Run animations
