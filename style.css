@@ -97,3 +97,15 @@ nav img {
   bottom: -3%;
   transform: scale(2.5);
 }
+
+.circle-2 {
+  left: 35%;
+  bottom: 10%;
+  transform: scale(.9);
+}
+
+.circle-3 {
+  left: 20%;
+  top: 15%;
+  transform: scale(1.5);
+}
