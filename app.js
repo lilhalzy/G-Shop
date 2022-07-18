@@ -20,7 +20,7 @@ const leaveAnimation = (current, done) => {
     tLeave.fromTo(
       product,
       { opacity: 1, y: 0 },
-      { opacity: 0, y: 100, onComplete: done },
+      { opacity: 0, y: -100, onComplete: done },
       "<"
     ),
     tLeave.fromTo(
@@ -33,6 +33,34 @@ const leaveAnimation = (current, done) => {
       circles,
       { opacity: 1, y: 0 },
       { opacity: 0, y: -200, stagger: 0.15 },
+      "<"
+    )
+  );
+};
+
+  const enterAnimation = (current, done) => {
+  const product = current.querySelector(".img-container");
+  const text = current.querySelector(".showcase-text");
+  const circles = current.querySelector(".circle");
+  const arrow = current.querySelector(".showcase-arrow");
+  return (
+    tLeave.fromTo(arrow, { opacity: 0, y: 50 }, { opacity: 1, y: 0 }),
+    tLeave.fromTo(
+      product,
+      { opacity: 0, y: -100 },
+      { opacity: 1, y: 0, onComplete: done },
+      "<"
+    ),
+    tLeave.fromTo(
+      text,
+      { opacity: 0, y: 100 },
+      { opacity: 1, y: 0, onComplete: done },
+      "<"
+    ),
+    tLeave.fromTo(
+      circles,
+      { opacity: 0, y: -200 },
+      { opacity: 1, y: 0, stagger: 0.15 },
       "<"
     )
   );
@@ -52,12 +80,9 @@ barba.init({
       enter(data) {
         const done = this.async();
         let next = data.next.container;
-        gsap.fromTo(
-          next,
-          { opacity: 0 },
-          { opacity: 1, duration: 1.2, onComplete: done }
-        );
+        enterAnimation(next, done)
       },
     },
   ],
 });
+
