@@ -1,6 +1,3 @@
-const timeline = gsap.timeline({
-  defaults: { duration: 0.75, ease: "Power2.easeOut" },
-});
 const tEnter = gsap.timeline({
   defaults: { duration: 0.75, ease: "Power2.easeOut" },
 });
@@ -32,13 +29,19 @@ const leaveAnimation = (current, done) => {
     tLeave.fromTo(
       circles,
       { opacity: 1, y: 0 },
-      { opacity: 0, y: -200, stagger: 0.15 },
+      {
+        opacity: 0,
+        y: -200,
+        stagger: 0.15,
+        ease: "back.out(1.7)",
+        duration: 1,
+      },
       "<"
     )
   );
 };
 
-  const enterAnimation = (current, done) => {
+const enterAnimation = (current, done) => {
   const product = current.querySelector(".img-container");
   const text = current.querySelector(".showcase-text");
   const circles = current.querySelector(".circle");
@@ -60,7 +63,7 @@ const leaveAnimation = (current, done) => {
     tLeave.fromTo(
       circles,
       { opacity: 0, y: -200 },
-      { opacity: 1, y: 0, stagger: 0.15 },
+      { opacity: 1, y: 0, stagger: 0.15, ease: 'back.out(1.7)', duration: 1 },
       "<"
     )
   );
@@ -80,9 +83,8 @@ barba.init({
       enter(data) {
         const done = this.async();
         let next = data.next.container;
-        enterAnimation(next, done)
+        enterAnimation(next, done);
       },
     },
   ],
 });
-
