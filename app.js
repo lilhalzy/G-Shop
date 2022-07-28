@@ -95,6 +95,11 @@ barba.init({
         const done = this.async();
         let next = data.next.container;
         productEnterAnimation(next, done)
+      },
+      leave(data) {
+        const done = this.async();
+        let current = data.current.container;
+        productLeaveAnimation(current, done)
       }
     },
   ],
@@ -103,4 +108,8 @@ barba.init({
 function productEnterAnimation (next, done) {
   tEnter.fromTo(next, {y: '100%'}, {y: '0%'})
   tEnter.fromTo('.card', {opacity: 0, y: 50}, {opacity: 1, y: 0, stagger: .1, onComplete: done})
+}
+
+function productLeaveAnimation (current, done) {
+  tLeave.fromTo(current, {opacity: 1}, {opacity: 0, onComplete: done})
 }
