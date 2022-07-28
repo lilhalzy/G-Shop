@@ -90,8 +90,8 @@ barba.init({
     {
       name: 'product-transition',
       sync: true,
-      from: {namespace: ['ps5']},
-      to: {namespace: ['product']},
+      from: {namespace: ['ps5', 'product']},
+      to: {namespace: ['product', 'ps5']},
       enter(data) {
         const done = this.async();
         let next = data.next.container;
