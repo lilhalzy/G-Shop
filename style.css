@@ -154,3 +154,8 @@ nav img {
   justify-content: space-between;
   align-items: center;
 }
+
+.product-cart:hover {
+  cursor: pointer;
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(6deg) brightness(104%) contrast(97%);
+}
