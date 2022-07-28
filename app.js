@@ -86,5 +86,20 @@ barba.init({
         enterAnimation(next, done);
       },
     },
+    // Product page animation
+    {
+      name: 'product-transition',
+      from: {namespace: ['ps5']},
+      to: {namespace: ['product']},
+      enter(data) {
+        const done = this.async();
+        let next = data.next.container;
+        productEnterAnimation(next, done)
+      }
+    },
   ],
 });
+
+function productEnterAnimation (next, done) {
+  tEnter.fromTo(next, {y: '100%'}, {y: '0%'})
+}
