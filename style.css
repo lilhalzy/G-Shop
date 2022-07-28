@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Finlandica&family=Poppins:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Finlandica&family=Poppins:wght@400;500&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
 }
 
 body {
-  background: linear-gradient(260deg, #A0B2A6, #A9ACA9)
+  background: linear-gradient(260deg, #a0b2a6, #a9aca9);
 }
 
 .showcase {
@@ -27,7 +27,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .5rem 15%;
+  padding: 0.5rem 15%;
 }
 
 .logo {
@@ -38,7 +38,7 @@ nav {
 }
 
 nav img {
-  transform: scale(.7);
+  transform: scale(0.7);
 }
 
 .img-container {
@@ -71,11 +71,11 @@ nav img {
 }
 
 .showcase-btn {
-  font-size: .9rem;
-  padding: .6rem 1.8rem;
-  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.8rem;
+  font-family: "Poppins", sans-serif;
   color: #000;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   border: none;
   cursor: pointer;
 }
@@ -84,7 +84,7 @@ nav img {
   position: absolute;
   right: 15%;
   bottom: 10%;
-  transform: scale(.6);
+  transform: scale(0.6);
 }
 /* Bubbles */
 .circle {
@@ -102,7 +102,7 @@ nav img {
 .circle-2 {
   left: 35%;
   bottom: 10%;
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .circle-3 {
@@ -126,7 +126,7 @@ nav img {
 
 .product-description {
   padding: 5% 15%;
-  color: #4b4b4b;  
+  color: #4b4b4b;
 }
 
 .product-description h2 {
@@ -140,7 +140,7 @@ nav img {
 
 .product-gallery {
   display: grid;
-  padding: 0 15%;
+  padding: 0 15% 5%;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2rem;
 }
@@ -158,5 +158,51 @@ nav img {
 
 .product-cart:hover {
   cursor: pointer;
-  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(6deg) brightness(104%) contrast(97%);
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(6deg)
+    brightness(104%) contrast(97%);
+}
+
+@media screen and (max-width: 768px) {
+  .showcase {
+    flex-direction: column;
+    padding: 20%;
+    justify-content: space-evenly;
+    min-height: 85vh;
+  }
+  .img-container img {
+    height: 100%;
+    
+  }
+  .img-container {
+    min-height: 30vh;
+    justify-content: center;
+    order: 1;
+  }
+  .circle-3 {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3);
+  }
+  .circle-1,
+  .circle-2 {
+    display: none;
+  }
+  .showcase-title {
+    font-size: 1.5rem;
+  }
+  .showcase-subtitle {
+    font-size: 1rem;
+    padding: 2rem 0;
+  }
+  .showcase-text {
+    padding-bottom: 0;
+  }
+  .showcase-arrow {
+    right: 5%;
+    bottom: 50%;
+  }
+  .product-gallery, .product-img{
+    padding: 0 10% 15%;
+    width: 100%;
+  }
 }
