@@ -102,4 +102,5 @@ barba.init({
 
 function productEnterAnimation (next, done) {
   tEnter.fromTo(next, {y: '100%'}, {y: '0%'})
+  tEnter.fromTo('.card', {opacity: 0, y: 50}, {opacity: 1, y: 0, stagger: .1, onComplete: done})
 }
