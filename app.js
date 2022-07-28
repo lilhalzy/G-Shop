@@ -112,5 +112,5 @@ function productEnterAnimation (next, done) {
 }
 
 function productLeaveAnimation (current, done) {
-  tLeave.fromTo(current, {opacity: 1}, {opacity: 0, onComplete: done})
+  tLeave.fromTo(current, {y: '0%'}, {y: '100%', onComplete: done})
 }
