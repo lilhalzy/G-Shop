@@ -89,6 +89,7 @@ barba.init({
     // Product page animation
     {
       name: 'product-transition',
+      sync: true,
       from: {namespace: ['ps5']},
       to: {namespace: ['product']},
       enter(data) {
