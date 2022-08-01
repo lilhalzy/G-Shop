@@ -171,7 +171,6 @@ nav img {
   }
   .img-container img {
     height: 100%;
-    
   }
   .img-container {
     min-height: 30vh;
@@ -201,7 +200,8 @@ nav img {
     right: 5%;
     bottom: 50%;
   }
-  .product-gallery, .product-img{
+  .product-gallery,
+  .product-img {
     padding: 0 10% 15%;
     width: 100%;
   }
